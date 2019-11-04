@@ -43,7 +43,7 @@ namespace Group_Spotify_Architect
             var tmp = await webAPI.SearchItemsAsync(title, SpotifyAPI.Web.Enums.SearchType.Track, size);
             foreach (var item in tmp.Tracks.Items)
             {
-                output.Add(new Song(item.Name, item.Artists[0].ToString(), item.Uri));
+                output.Add(new Song(item.Name, item.Artists[0].Name, item.Uri));
             }
             return output;
         }

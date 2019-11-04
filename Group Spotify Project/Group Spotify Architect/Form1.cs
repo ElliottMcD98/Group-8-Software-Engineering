@@ -31,6 +31,7 @@ namespace Group_Spotify_Architect
 
             cb_catagory.DataSource = Enum.GetValues(typeof(NewsAPI.Constants.Categories));
             cb_country.DataSource = Enum.GetValues(typeof(NewsAPI.Constants.Countries));
+            cb_country.SelectedItem = NewsAPI.Constants.Countries.GB;
         }
 
         private async void bt_searchSong_Click(object sender, EventArgs e)
