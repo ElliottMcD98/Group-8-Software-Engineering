@@ -1,10 +1,5 @@
-﻿using edu.stanford.nlp.tagger.maxent;
-using edu.stanford.nlp.trees;
-using NewsAPI;
-using System;
+﻿using NewsAPI;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -44,7 +39,7 @@ namespace Group_Spotify_Architect
             foreach (var article in response.Articles)
             {
                 output.Add(new Article(article.Title, article.Description, article.Url));
-            }                   
+            }
 
 
             return output;

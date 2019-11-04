@@ -1,11 +1,7 @@
 ﻿using SpotifyAPI.Web;
-using SpotifyAPI.Web.Models;
 using SpotifyAPI.Web.Auth;
-using System;
-using System.Collections;
+using SpotifyAPI.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Group_Spotify_Architect
@@ -16,7 +12,7 @@ namespace Group_Spotify_Architect
         PrivateProfile user;
         public SpotifyInterface()
         {
-            
+
         }
         public void Connect()
         {

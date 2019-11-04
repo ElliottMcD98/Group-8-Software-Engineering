@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Group_Spotify_Architect
@@ -46,7 +45,7 @@ namespace Group_Spotify_Architect
         {
             var results = await news.GetHeadlines(country, catagory, size);
 
-            
+
 
             List<string> headlineText = new List<string>();
 
@@ -58,11 +57,11 @@ namespace Group_Spotify_Architect
             List<Song> playlist = new List<Song>();
 
 
-            for(int x = 0; x < headlineText.Count; x++)
+            for (int x = 0; x < headlineText.Count; x++)
             {
                 var result = headlineText[x];
                 result = result.Split(' ').FirstOrDefault().Trim();
- 
+
                 var songOutput = await spotify.GetSongs(result, 1);
 
                 try
@@ -73,11 +72,11 @@ namespace Group_Spotify_Architect
                 {
                     Console.WriteLine(e.Message);
                 }
-                
+
 
 
             }
-            
+
 
             return playlist;
 

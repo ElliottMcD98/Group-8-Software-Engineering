@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Group_Spotify_Architect
@@ -20,7 +13,7 @@ namespace Group_Spotify_Architect
             spotify = new SpotifyInterface();
             news = new NewsInterface();
             try
-            { 
+            {
                 spotify.Connect();
                 lb_connected.Text = "Connected";
             }
@@ -59,7 +52,7 @@ namespace Group_Spotify_Architect
             {
                 lb_spotify.Items.Add(search[x]);
             }
-            
+
         }
     }
 }
