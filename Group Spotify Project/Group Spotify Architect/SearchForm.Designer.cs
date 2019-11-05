@@ -1,4 +1,4 @@
-﻿namespace SpotifyDesktop
+namespace SpotifyDesktop
 {
     partial class SearchForm
     {
@@ -135,7 +135,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SpotifyDesktop.Properties.Resources.volume;
+            this.pictureBox1.Image = global::Group_Spotify_Architect.Properties.Resources.volume;
             this.pictureBox1.Location = new System.Drawing.Point(317, 503);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(37, 31);
