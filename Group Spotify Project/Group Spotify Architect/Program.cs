@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using Group_Spotify_Architect;
 
@@ -14,7 +14,7 @@ namespace SpotifyDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new SearchForm());
         }
     }
 }
