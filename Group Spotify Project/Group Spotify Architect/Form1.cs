@@ -46,7 +46,7 @@ namespace Group_Spotify_Architect
             Enum.TryParse<NewsAPI.Constants.Countries>(cb_country.SelectedValue.ToString(), out cont);
             NewsAPI.Constants.Categories cat;
             Enum.TryParse<NewsAPI.Constants.Categories>(cb_country.SelectedValue.ToString(), out cat);
-            var search = await algorithm.SearchPlaylist(cont, cat);
+            var search = await algorithm.SearchPlaylist(cont, cat, Convert.ToInt32(numericUpDown1.Value));
             lb_spotify.Items.Clear();
             for (int x = 0; x < search.Count; x++)
             {

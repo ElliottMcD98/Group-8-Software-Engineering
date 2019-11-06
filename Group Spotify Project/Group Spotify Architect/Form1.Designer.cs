@@ -37,6 +37,9 @@
             this.cb_country = new System.Windows.Forms.ComboBox();
             this.cb_catagory = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // lb_connected
@@ -62,7 +65,7 @@
             // bt_searchSong
             // 
             this.bt_searchSong.Location = new System.Drawing.Point(446, 192);
-            this.bt_searchSong.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bt_searchSong.Margin = new System.Windows.Forms.Padding(6);
             this.bt_searchSong.Name = "bt_searchSong";
             this.bt_searchSong.Size = new System.Drawing.Size(200, 44);
             this.bt_searchSong.TabIndex = 6;
@@ -75,7 +78,7 @@
             this.lb_spotify.FormattingEnabled = true;
             this.lb_spotify.ItemHeight = 25;
             this.lb_spotify.Location = new System.Drawing.Point(1138, 23);
-            this.lb_spotify.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lb_spotify.Margin = new System.Windows.Forms.Padding(6);
             this.lb_spotify.Name = "lb_spotify";
             this.lb_spotify.Size = new System.Drawing.Size(434, 629);
             this.lb_spotify.TabIndex = 7;
@@ -93,7 +96,7 @@
             // bt_searchPlaylist
             // 
             this.bt_searchPlaylist.Location = new System.Drawing.Point(446, 248);
-            this.bt_searchPlaylist.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bt_searchPlaylist.Margin = new System.Windows.Forms.Padding(6);
             this.bt_searchPlaylist.Name = "bt_searchPlaylist";
             this.bt_searchPlaylist.Size = new System.Drawing.Size(202, 44);
             this.bt_searchPlaylist.TabIndex = 10;
@@ -105,7 +108,7 @@
             // 
             this.cb_country.FormattingEnabled = true;
             this.cb_country.Location = new System.Drawing.Point(30, 196);
-            this.cb_country.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cb_country.Margin = new System.Windows.Forms.Padding(6);
             this.cb_country.Name = "cb_country";
             this.cb_country.Size = new System.Drawing.Size(238, 33);
             this.cb_country.TabIndex = 11;
@@ -114,16 +117,39 @@
             // 
             this.cb_catagory.FormattingEnabled = true;
             this.cb_catagory.Location = new System.Drawing.Point(30, 290);
-            this.cb_catagory.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cb_catagory.Margin = new System.Windows.Forms.Padding(6);
             this.cb_catagory.Name = "cb_catagory";
             this.cb_catagory.Size = new System.Drawing.Size(238, 33);
             this.cb_catagory.TabIndex = 12;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(297, 196);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 31);
+            this.numericUpDown1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(292, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 25);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Song Amount";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1600, 677);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.cb_catagory);
             this.Controls.Add(this.cb_country);
             this.Controls.Add(this.bt_searchPlaylist);
@@ -132,9 +158,10 @@
             this.Controls.Add(this.bt_searchSong);
             this.Controls.Add(this.lb_country);
             this.Controls.Add(this.lb_connected);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,6 +177,8 @@
         private System.Windows.Forms.ComboBox cb_country;
         private System.Windows.Forms.ComboBox cb_catagory;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

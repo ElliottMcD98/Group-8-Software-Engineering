@@ -45,7 +45,7 @@ namespace Group_Spotify_Architect
         public async Task<List<Song>> SearchPlaylist(NewsAPI.Constants.Countries country, NewsAPI.Constants.Categories catagory, int size = 25)
         {
             int trackAmount = 0;
-            var results = await news.GetHeadlines(country, catagory, size);
+            var results = await news.GetHeadlines(country, catagory, 50);
 
 
 
@@ -76,11 +76,19 @@ namespace Group_Spotify_Architect
                     Console.WriteLine(e.Message);
                 }
 
+                if (trackAmount == size)
+                {
+                    break;
+                }
 
 
             }
 
-            MessageBox.Show("Unfortunately we could only find " + trackAmount + " songs related to this news!", "Title", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (trackAmount < size)
+            {
+                MessageBox.Show("Unfortunately we could only find " + trackAmount + " songs related to this news!", "Title", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
 
 
             return playlist;
