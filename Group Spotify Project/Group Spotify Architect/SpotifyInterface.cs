@@ -12,7 +12,7 @@ namespace Group_Spotify_Architect
         PrivateProfile user;
         public SpotifyInterface()
         {
-
+            
         }
         public void Connect()
         {

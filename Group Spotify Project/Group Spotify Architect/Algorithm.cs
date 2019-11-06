@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Group_Spotify_Architect
 {
@@ -43,6 +44,7 @@ namespace Group_Spotify_Architect
 
         public async Task<List<Song>> SearchPlaylist(NewsAPI.Constants.Countries country, NewsAPI.Constants.Categories catagory, int size = 25)
         {
+            int trackAmount = 0;
             var results = await news.GetHeadlines(country, catagory, size);
 
 
@@ -67,6 +69,7 @@ namespace Group_Spotify_Architect
                 try
                 {
                     playlist.Add(songOutput[0]);
+                    trackAmount++;
                 }
                 catch (System.ArgumentOutOfRangeException e)
                 {
@@ -76,6 +79,8 @@ namespace Group_Spotify_Architect
 
 
             }
+
+            MessageBox.Show("Unfortunately we could only find " + trackAmount + " songs related to this news!", "Title", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             return playlist;
