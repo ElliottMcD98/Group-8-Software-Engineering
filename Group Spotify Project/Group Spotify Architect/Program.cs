@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 using Group_Spotify_Architect;
 
-namespace SpotifyDesktop
+namespace Group_Spotify_Architect
 {
     static class Program
     {

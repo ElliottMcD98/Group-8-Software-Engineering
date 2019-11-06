@@ -1,4 +1,4 @@
-namespace SpotifyDesktop
+namespace Group_Spotify_Architect
 {
     partial class SearchForm
     {

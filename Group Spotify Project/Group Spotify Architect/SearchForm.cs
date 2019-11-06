@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SpotifyDesktop
+namespace Group_Spotify_Architect
 {
     public partial class SearchForm : Form
     {
