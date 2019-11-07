@@ -53,5 +53,44 @@ namespace Group_Spotify_Architect
         {
 
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (numericUpDown1.Value > tB_SongAmount.Maximum)
+                {
+                    numericUpDown1.Value = tB_SongAmount.Maximum;
+                }
+
+                if (numericUpDown1.Value < tB_SongAmount.Minimum)
+                {
+                    numericUpDown1.Value = tB_SongAmount.Minimum;
+                }
+            }
+            catch
+            {
+
+                throw;
+            }
+        }
+
+        private void tB_SongAmount_ValueChanged(object sender, EventArgs e)
+        {
+            numericUpDown1.Value = tB_SongAmount.Value;
+        }
+
+        private void lb_spotify_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (lb_spotify.SelectedItem != null)
+            {
+                try
+                {
+                    Song tmp = (Song)lb_spotify.SelectedItem;
+                    System.Diagnostics.Process.Start(tmp.Link);
+                }
+                catch {}
+            }
+        }
     }
 }
