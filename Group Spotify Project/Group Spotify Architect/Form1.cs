@@ -27,17 +27,6 @@ namespace Group_Spotify_Architect
             cb_country.SelectedItem = NewsAPI.Constants.Countries.GB;
         }
 
-        private async void bt_searchSong_Click(object sender, EventArgs e)
-        {
-            Algorithm algorithm = new Algorithm(ref spotify, ref news);
-            NewsAPI.Constants.Countries cont;
-            Enum.TryParse<NewsAPI.Constants.Countries>(cb_country.SelectedValue.ToString(), out cont);
-            NewsAPI.Constants.Categories cat;
-            Enum.TryParse<NewsAPI.Constants.Categories>(cb_country.SelectedValue.ToString(), out cat);
-            var search = await algorithm.SearchSong(cont, cat);
-            lb_spotify.Items.Clear();
-            lb_spotify.Items.Add(search);
-        }
 
         private async void Bt_searchPlaylist_Click(object sender, EventArgs e)
         {
@@ -52,6 +41,16 @@ namespace Group_Spotify_Architect
             {
                 lb_spotify.Items.Add(search[x]);
             }
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
 
         }
     }

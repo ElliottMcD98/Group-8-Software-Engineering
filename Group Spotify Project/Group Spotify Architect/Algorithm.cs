@@ -16,31 +16,7 @@ namespace Group_Spotify_Architect
             news = News;
         }
 
-        public async Task<Song> SearchSong(NewsAPI.Constants.Countries country, NewsAPI.Constants.Categories catagory, int size = 25)
-        {
-            var results = await news.GetHeadlines(country, catagory, size);
-
-            List<string> headlineText = new List<string>();
-
-            foreach (var item in results)
-            {
-                headlineText.Add(item.Title);
-            }
-
-            Random r = new Random();
-
-            foreach (var x in headlineText)
-            {
-                Console.WriteLine(x);
-            }
-            var result = headlineText[r.Next(0, headlineText.Count)];
-            result = result.Split(' ').FirstOrDefault().Trim();
-            Console.WriteLine(result);
-            var songOutput = await spotify.GetSongs(result, 1);
-
-            return songOutput.FirstOrDefault();
-
-        }
+        
 
         public async Task<List<Song>> SearchPlaylist(NewsAPI.Constants.Countries country, NewsAPI.Constants.Categories catagory, int size = 25)
         {
