@@ -92,5 +92,10 @@ namespace Group_Spotify_Architect
                 catch {}
             }
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
