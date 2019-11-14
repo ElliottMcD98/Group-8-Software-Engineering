@@ -2,9 +2,34 @@
 {
     class Song
     {
-        public string Title;
-        public string Artist;
-        public string Link;
+        private string title;
+        private string artist;
+        private string link;
+        public string Title {
+            get {
+                return this.title;
+            }
+            set {
+                this.title = value;
+            }
+        }
+        public string Artist {
+            get {
+                return this.artist;
+            }
+            set {
+                this.artist = value;
+            }
+        }
+        public string Link {
+            get {
+                return this.link;
+            }
+            set {
+                this.link = value;
+            }
+        }
+
         public Song(string Title, string Artist, string Link)
         {
             this.Title = Title;
