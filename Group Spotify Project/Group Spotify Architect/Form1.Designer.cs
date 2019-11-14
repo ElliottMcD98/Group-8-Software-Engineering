@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserInterface));
             this.lb_connected = new System.Windows.Forms.Label();
             this.lb_country = new System.Windows.Forms.Label();
             this.lb_spotify = new System.Windows.Forms.ListBox();
@@ -129,7 +130,7 @@
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericUpDown1.ForeColor = System.Drawing.SystemColors.Window;
             this.numericUpDown1.Location = new System.Drawing.Point(444, 70);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             50,
             0,
@@ -217,6 +218,7 @@
             this.Controls.Add(this.lb_country);
             this.Controls.Add(this.lb_connected);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserInterface";
             this.Text = "Group Spotify Architect";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
