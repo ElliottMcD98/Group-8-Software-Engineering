@@ -38,7 +38,17 @@ namespace Group_Spotify_Architect
             for (int x = 0; x < headlineText.Count; x++)
             {
                 var result = headlineText[x];
+                var splitResult = result.Split(' ');
                 result = result.Split(' ').FirstOrDefault().Trim();
+                for (int y = 0; y < splitResult.Length; y++)
+                {
+                    if (splitResult[y].Length > 3)
+                    {
+                        result = splitResult[y];
+                        break;
+                    }
+                }
+                
 
                 var songOutput = await spotify.GetSongs(result, 1);
 
