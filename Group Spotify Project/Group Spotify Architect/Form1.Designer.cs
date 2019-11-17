@@ -37,13 +37,13 @@
             this.cb_country = new System.Windows.Forms.ComboBox();
             this.cb_catagory = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nud_Song = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lb_songs = new System.Windows.Forms.Label();
+            this.lb_status = new System.Windows.Forms.Label();
             this.tB_SongAmount = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.lb_info = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Song)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tB_SongAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,22 +124,22 @@
             this.cb_catagory.Size = new System.Drawing.Size(121, 26);
             this.cb_catagory.TabIndex = 12;
             // 
-            // numericUpDown1
+            // nud_Song
             // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.WindowText;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.numericUpDown1.ForeColor = System.Drawing.SystemColors.Window;
-            this.numericUpDown1.Location = new System.Drawing.Point(444, 70);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.nud_Song.BackColor = System.Drawing.SystemColors.WindowText;
+            this.nud_Song.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.nud_Song.ForeColor = System.Drawing.SystemColors.Window;
+            this.nud_Song.Location = new System.Drawing.Point(444, 70);
+            this.nud_Song.Margin = new System.Windows.Forms.Padding(2);
+            this.nud_Song.Maximum = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(37, 24);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.nud_Song.Name = "nud_Song";
+            this.nud_Song.Size = new System.Drawing.Size(37, 24);
+            this.nud_Song.TabIndex = 13;
+            this.nud_Song.ValueChanged += new System.EventHandler(this.nud_Song_ValueChanged);
             // 
             // label1
             // 
@@ -152,24 +152,24 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Song Amount:";
             // 
-            // label2
+            // lb_songs
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(10, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 18);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Song Playlist:";
+            this.lb_songs.AutoSize = true;
+            this.lb_songs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lb_songs.Location = new System.Drawing.Point(10, 140);
+            this.lb_songs.Name = "lb_songs";
+            this.lb_songs.Size = new System.Drawing.Size(97, 18);
+            this.lb_songs.TabIndex = 16;
+            this.lb_songs.Text = "Song Playlist:";
             // 
-            // label3
+            // lb_status
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Status:";
+            this.lb_status.AutoSize = true;
+            this.lb_status.Location = new System.Drawing.Point(12, 9);
+            this.lb_status.Name = "lb_status";
+            this.lb_status.Size = new System.Drawing.Size(40, 13);
+            this.lb_status.TabIndex = 17;
+            this.lb_status.Text = "Status:";
             // 
             // tB_SongAmount
             // 
@@ -183,20 +183,20 @@
             this.tB_SongAmount.Value = 25;
             this.tB_SongAmount.ValueChanged += new System.EventHandler(this.tB_SongAmount_ValueChanged);
             // 
-            // label4
+            // lb_info
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Gold;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.label4.Location = new System.Drawing.Point(152, 416);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(175, 20);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Double click song to play";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_info.AutoSize = true;
+            this.lb_info.BackColor = System.Drawing.Color.Gold;
+            this.lb_info.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.lb_info.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lb_info.Location = new System.Drawing.Point(152, 416);
+            this.lb_info.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lb_info.Name = "lb_info";
+            this.lb_info.Size = new System.Drawing.Size(175, 20);
+            this.lb_info.TabIndex = 19;
+            this.lb_info.Text = "Double click song to play";
+            this.lb_info.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserInterface
             // 
@@ -204,12 +204,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.ClientSize = new System.Drawing.Size(492, 462);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lb_info);
             this.Controls.Add(this.tB_SongAmount);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lb_status);
+            this.Controls.Add(this.lb_songs);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nud_Song);
             this.Controls.Add(this.cb_catagory);
             this.Controls.Add(this.cb_country);
             this.Controls.Add(this.bt_searchPlaylist);
@@ -221,7 +221,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserInterface";
             this.Text = "Group Spotify Architect";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_Song)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tB_SongAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,12 +237,12 @@
         private System.Windows.Forms.ComboBox cb_country;
         private System.Windows.Forms.ComboBox cb_catagory;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nud_Song;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lb_songs;
+        private System.Windows.Forms.Label lb_status;
         private System.Windows.Forms.TrackBar tB_SongAmount;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lb_info;
     }
 }
 

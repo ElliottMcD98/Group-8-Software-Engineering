@@ -29,7 +29,7 @@ namespace Group_Spotify_Architect
             cb_country.SelectedItem = NewsAPI.Constants.Countries.GB;
 
             tB_SongAmount.Value = 25;
-            numericUpDown1.Value = 25;
+            nud_Song.Value = 25;
         }
 
 
@@ -42,7 +42,7 @@ namespace Group_Spotify_Architect
             Enum.TryParse<NewsAPI.Constants.Countries>(cb_country.SelectedValue.ToString(), out cont);
             Enum.TryParse<NewsAPI.Constants.Categories>(cb_catagory.SelectedValue.ToString(), out cat);
 
-            var search = await algorithm.SearchPlaylistAsync(cont, cat, Convert.ToInt32(numericUpDown1.Value));
+            var search = await algorithm.SearchPlaylistAsync(cont, cat, Convert.ToInt32(nud_Song.Value));
 
             lb_spotify.Items.Clear();
 
@@ -52,18 +52,18 @@ namespace Group_Spotify_Architect
             }
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void nud_Song_ValueChanged(object sender, EventArgs e)
         {
             try
             {
-                if (numericUpDown1.Value > tB_SongAmount.Maximum)
+                if (nud_Song.Value > tB_SongAmount.Maximum)
                 {
-                    numericUpDown1.Value = tB_SongAmount.Maximum;
+                    nud_Song.Value = tB_SongAmount.Maximum;
                 }
 
-                if (numericUpDown1.Value < tB_SongAmount.Minimum)
+                if (nud_Song.Value < tB_SongAmount.Minimum)
                 {
-                    numericUpDown1.Value = tB_SongAmount.Minimum;
+                    nud_Song.Value = tB_SongAmount.Minimum;
                 }
             }
             catch
@@ -74,7 +74,7 @@ namespace Group_Spotify_Architect
 
         private void tB_SongAmount_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown1.Value = tB_SongAmount.Value;
+            nud_Song.Value = tB_SongAmount.Value;
         }
 
         private void lb_spotify_MouseDoubleClick(object sender, MouseEventArgs e)
