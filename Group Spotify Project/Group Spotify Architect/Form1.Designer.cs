@@ -87,7 +87,7 @@
             this.lb_Catagory.Name = "lb_Catagory";
             this.lb_Catagory.Size = new System.Drawing.Size(72, 18);
             this.lb_Catagory.TabIndex = 8;
-            this.lb_Catagory.Text = "Catagory:";
+            this.lb_Catagory.Text = "Category:";
             // 
             // bt_searchPlaylist
             // 
@@ -218,8 +218,11 @@
             this.Controls.Add(this.lb_country);
             this.Controls.Add(this.lb_connected);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "UserInterface";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Group Spotify Architect";
             ((System.ComponentModel.ISupportInitialize)(this.nud_Song)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tB_SongAmount)).EndInit();
