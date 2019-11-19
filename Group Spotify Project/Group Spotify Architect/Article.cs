@@ -1,6 +1,6 @@
 ﻿namespace Group_Spotify_Architect
 {
-    class Article
+    public class Article
     {
         private string title;
         private string desc;
