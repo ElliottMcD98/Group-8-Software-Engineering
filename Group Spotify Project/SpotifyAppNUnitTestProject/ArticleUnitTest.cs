@@ -1,6 +1,5 @@
 ﻿using NUnit.Framework;
 
-
 namespace Group_Spotify_Architect
 {
     public class ArticleUnitTests
@@ -38,6 +37,15 @@ namespace Group_Spotify_Architect
             Assert.AreEqual(ExpectedLink, sut.Link);
         }
 
+        [Test]
+        public void CheckToStringReturnsTitle()
+        {
+            const string ExpectedTitle = "ToString Title";
+
+            var sut = new Article(ExpectedTitle, "Descr", "Link");
+
+            Assert.AreEqual(ExpectedTitle, sut.ToString());
+        }
 
     }
 }

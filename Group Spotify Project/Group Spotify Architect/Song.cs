@@ -1,6 +1,6 @@
 ﻿namespace Group_Spotify_Architect
 {
-    class Song
+    public class Song
     {
         private string title;
         private string artist;
