@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Group_Spotify_Architect
 {
-    class NewsInterface
+    public class NewsInterface
     {
         NewsApiClient webAPI;
 
