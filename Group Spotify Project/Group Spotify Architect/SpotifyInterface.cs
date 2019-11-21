@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Group_Spotify_Architect
 {
-    class SpotifyInterface
+    public class SpotifyInterface
     {
         SpotifyWebAPI webAPI;
         PrivateProfile user;
@@ -33,7 +33,7 @@ namespace Group_Spotify_Architect
             }
         }
 
-        public async Task<List<Song>> GetSongsAsync(string title, int size = 25)
+        public virtual async Task<List<Song>> GetSongsAsync(string title, int size = 25)
         {
             var output = new List<Song>();
             var tmp = await webAPI.SearchItemsAsync(title, SpotifyAPI.Web.Enums.SearchType.Track, size);

@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 namespace Group_Spotify_Architect
 {
-    class Algorithm
+    public class Algorithm
     {
         private SpotifyInterface spotify;
         private NewsInterface news;
-        public Algorithm(ref SpotifyInterface Spotify, ref NewsInterface News)
+        public Algorithm(SpotifyInterface Spotify, NewsInterface News)
         {
             spotify = Spotify;
             news = News;
-        }        
+        }
+
+        public bool TooFewTracks { get; set; }
+        public int TrackAmount { get; set; }
 
         public async Task<List<Song>> SearchPlaylistAsync(NewsAPI.Constants.Countries country, NewsAPI.Constants.Categories catagory, int size = 25)
         {
@@ -62,10 +65,8 @@ namespace Group_Spotify_Architect
                 }                
             }
 
-            if (trackAmount < size)
-            {
-                MessageBox.Show("Unfortunately we could only find " + trackAmount + " songs related to this news!", "Title", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            TooFewTracks = (trackAmount < size);
+            TrackAmount = trackAmount;
 
             return playlist;
         }

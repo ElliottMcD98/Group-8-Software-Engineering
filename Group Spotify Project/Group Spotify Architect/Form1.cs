@@ -37,12 +37,14 @@ namespace Group_Spotify_Architect
         {
             NewsAPI.Constants.Countries cont;
             NewsAPI.Constants.Categories cat;
-            Algorithm algorithm = new Algorithm(ref spotify, ref news);
+            Algorithm algorithm = new Algorithm( spotify, news);
 
             Enum.TryParse<NewsAPI.Constants.Countries>(cb_country.SelectedValue.ToString(), out cont);
             Enum.TryParse<NewsAPI.Constants.Categories>(cb_catagory.SelectedValue.ToString(), out cat);
 
             var search = await algorithm.SearchPlaylistAsync(cont, cat, Convert.ToInt32(nud_Song.Value));
+
+            if(algorithm.TooFewTracks) MessageBox.Show("Unfortunately we could only find " + algorithm.TrackAmount + " songs related to this news!", "Title", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             lb_spotify.Items.Clear();
 
